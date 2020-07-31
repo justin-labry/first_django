@@ -1,0 +1,9 @@
+{% extends 'first/base.html' %}
+{% load static %}
+{%  block content %}
+<p>Input one number</p>
+<form action="{% url 'result' %}" method="get">
+    <input type="number" name="number"/>
+    <button type="submit">result view</button>
+</form>
+{%  endblock %}
