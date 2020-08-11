@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul li{
+            color:palevioletred;
+        }
+        #lecture>li {
+            border:1px solid red;
+            color:blue;
+        }
+        #select {
+            font-size: 1rem;
+        }
+        ul,ol {
+            background-color: powderblue;
+        }
+        .deactive {
+            text-decoration: line-through;
+        }
+</style>
+</head>
+<body>
+<h1 class="deactive">The order of classes.</h1>
+<ul>
+    <li class="deactive">HTML</li>
+    <li id="select">CSS</li>
+    <li class="deactive">JavaScript</li>
+</ul>
+<ol id="lecture">
+    <li class="deactive">HTML</li>
+    <li id="select">CSS
+        <ol>
+            <li>selector</li>
+            <li>declaration</li>
+        </ol>
+    </li>
+    <li class="deactive">JavaScript</li>
+</ol>
+
+<h1>Hello World</h1>
+<h2>Hello World</h2>
+</body>
+</html>
