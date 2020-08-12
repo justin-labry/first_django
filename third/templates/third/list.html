@@ -7,8 +7,8 @@
         <div class="card-body">
             <h5 class="card-titile">{{ item.name }}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{ item.address }}</h6>
-            <a href="{% url 'restaurant-detail' %}?id={{ item.id }}" class="card-link">details</a>
-            <a href="{% url 'restaurant-update' %}?id={{ item.id }}" class="card-link">Edit</a>
+            <a href="{% url 'restaurant-detail' restaurant_id=item.id %}" class="card-link">details</a>
+            <a href="{% url 'restaurant-update' restaurant_id=item.id %}" class="card-link">Edit</a>
         </div>
     </div>
 {% endfor %}

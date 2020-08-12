@@ -4,15 +4,24 @@
 <div class="container">
 <div class="row">
 <div class="col-sm-12" style="margin-top:20px">
-    <h3>{{ item.address }} </h3>
+    <h3>{{ item.name }} </h3>
     <p>
         {{ item.address }}
     </p>
     <p>
-        <a href="{% url 'restaurant-delete' %}?id={{ item.id }}">
+        <a href="{% url 'restaurant-delete' restaurant_id=item.id %}">
             <button class="btn btn-danger">delete</button>
         </a>
     </p>
+    <hr/>
+    <p>
+        <a href="{% url 'review-create' restaurant_id=item.id %}">
+            <button class="btn btn-info">write review</button>
+        </a>
+    </p>
+    {% for review in reviews %}
+        <li>{{ review.comment }} - {{ review.point }} point </li>
+    {% endfor %}
 </div>
 </div>
 </div>
