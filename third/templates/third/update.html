@@ -2,9 +2,9 @@
 {% load static %}
 {% block content %}
 <div class="container">
-    <form acgtoin="{% url 'restaurant-update' %}" method="post">
+    <form action="{% url 'restaurant-update' restaurant_id=form.instance.id %}" method="post">
         {% csrf_token %}
-        <input type="hidden" name="id" value="{{ form.instance.id }}"/>
+        <input type="hidden" name="restaurant_id" value="{{ form.instance.id }}"/>
         <table>
             {{  form.as_table }}
         </table>

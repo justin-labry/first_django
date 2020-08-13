@@ -7,6 +7,8 @@
         <div class="card-body">
             <h5 class="card-titile">{{ item.name }}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{ item.address }}</h6>
+            <p class="card-text">Review: {{ item.reviews_count }}, average:
+                {% if item.average_point is None %} 0.00 {% endif %} {{  item.average_point|floatformat:2 }} </p>
             <a href="{% url 'restaurant-detail' restaurant_id=item.id %}" class="card-link">details</a>
             <a href="{% url 'restaurant-update' restaurant_id=item.id %}" class="card-link">Edit</a>
         </div>
